@@ -62,8 +62,10 @@ llm = ChatGroq(
     temperature=0
 )
 
+# Replace lines 65 through 69 with this:
 prompt = ChatPromptTemplate.from_template("""
 You are a SQL expert. Based on the schema, write a SQL query.
 Return ONLY the SQL.
 Schema: {schema}
-Question
+Question: {question}
+""")
